@@ -1,0 +1,12 @@
+<div class="container p-5">
+  <div class="card">
+    <div class="card-header">
+      <i class="far <%= @task.completed ? 'fa-check-circle' : 'fa-circle' %>"></i> This task is <%= @task.completed ? 'completed' : 'not completed yet' %>.
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= @task.title %></h5>
+      <p class="card-text"><%= @task.details %></p>
+      <%= link_to "Back to tasks", tasks_path, class: "btn btn-primary" %> <%= link_to "Edit task", edit_task_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

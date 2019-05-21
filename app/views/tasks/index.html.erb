@@ -1,0 +1,13 @@
+<div class="container p-5">
+  <div class="card">
+    <div class="card-header">
+      My tasks
+    </div>
+    <ul class="list-group list-group-flush">
+      <% @tasks.each do |task| %>
+      <li class="list-group-item"><i class="far <%= task.completed ? 'fa-check-circle' : 'fa-circle' %>"></i> <%= link_to task.title, task_path(task) %> - <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, task_path(task), method: :delete, data: { confirm: "Are you sure?" } %></li>
+      <% end %>
+      <li class="list-group-item"><i class="fas fa-plus-circle"></i> <%= link_to "Create a new task", new_task_path %></li>
+    </ul>
+  </div>
+</div>
