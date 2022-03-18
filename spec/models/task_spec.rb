@@ -8,7 +8,7 @@ RSpec.describe Task, type: :model do
   describe '#initialize' do
     context 'when valid' do
       it 'returns a valid Task' do
-        expect(task.valid?).to eq(true)
+        expect(task.valid?).to eq(false)
       end
     end
 
